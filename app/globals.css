@@ -1,26 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --rose-gold: #C4956A;
+  --rose-gold-light: #E8D5C4;
+  --rose-gold-dark: #9E7A55;
+  --rose-gold-pale: #F5EDE4;
+  --cream: #FAFAF8;
+  --white: #FFFFFF;
+  --dark: #1A1A1A;
+  --dark-soft: #2D2D2D;
+  --gray: #6B6B6B;
+  --gray-light: #A8A8A8;
+  --border: #EDE8E3;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--cream);
+  --color-foreground: var(--dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--rose-gold-light);
+  border-radius: 3px;
+}
+
+.prose h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  margin: 2rem 0 1rem;
+}
+.prose h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.375rem;
+  margin: 1.5rem 0 0.75rem;
+}
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: #2D2D2D;
+}
+.prose ul {
+  list-style: none;
+  margin: 1.25rem 0;
+}
+.prose ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.prose ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--rose-gold);
 }

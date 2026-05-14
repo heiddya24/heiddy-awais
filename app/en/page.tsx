@@ -3,69 +3,86 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, Mic, Globe, Heart, Star, Award } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Heiddy Awais | Coach de Crecimiento Personal & Psicóloga",
+  title: "Heiddy Awais | Personal Growth Coach & Psychologist",
   description:
-    "Psicóloga, coach de crecimiento personal y conferencista de renombre internacional. Autora de 'Elegirme sin miedo'. Participante del Récord Guinness. Más de 50 países recorridos.",
+    "Psychologist, personal growth coach, and internationally renowned speaker. Author of 'Elegirme sin miedo'. Guinness World Record participant. Visited over 50 countries.",
+  alternates: {
+    canonical: "https://heiddyawais.com/en",
+    languages: {
+      "en-US": "https://heiddyawais.com/en",
+      "es-US": "https://heiddyawais.com",
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    alternateLocale: "es_US",
+    url: "https://heiddyawais.com/en",
+    siteName: "Heiddy Awais",
+    title: "Heiddy Awais | Personal Growth Coach & Psychologist",
+    description:
+      "Psychologist, personal growth coach, and internationally renowned speaker. Author of 'Elegirme sin miedo'.",
+  },
 };
 
 const stats = [
-  { value: "50+", label: "Países visitados", icon: Globe },
-  { value: "1", label: "Libro publicado", icon: BookOpen },
-  { value: "Récord", label: "Guinness", icon: Award },
-  { value: "100+", label: "Conferencias", icon: Mic },
+  { value: "50+", label: "Countries visited", icon: Globe },
+  { value: "1", label: "Published book", icon: BookOpen },
+  { value: "Record", label: "Guinness", icon: Award },
+  { value: "100+", label: "Conferences", icon: Mic },
 ];
 
 const pillars = [
   {
     icon: Heart,
-    title: "Mentalidad Femenina",
+    title: "Feminine Mindset",
     description:
-      "Acompañamos a mujeres a reconectar con su poder interno, liberarse del miedo y diseñar una vida extraordinaria desde el amor propio.",
+      "We accompany women in reconnecting with their inner power, releasing fear, and designing an extraordinary life from a place of self-love.",
   },
   {
     icon: Mic,
-    title: "Conferencias de Impacto",
+    title: "High-Impact Talks",
     description:
-      "Keynotes y workshops que transforman audiencias corporativas y femeninas con herramientas de psicología y crecimiento personal.",
+      "Keynotes and workshops that transform corporate and female audiences with psychology and personal growth tools.",
   },
   {
     icon: BookOpen,
-    title: "Conocimiento que Libera",
+    title: "Knowledge That Liberates",
     description:
-      "A través de sus libros y programas, Heiddy comparte décadas de aprendizaje en psicología, viajes y desarrollo humano.",
+      "Through her books and programs, Heiddy shares decades of learning in psychology, travel, and human development.",
   },
 ];
 
 const testimonials = [
   {
     quote:
-      "Heiddy tiene una habilidad única para llegar al corazón de las personas. Su conferencia fue la más poderosa de nuestro evento anual.",
-    name: "Directora de RRHH",
+      "Heiddy has a unique ability to touch people's hearts. Her conference was the most powerful of our annual event.",
+    name: "HR Director",
     company: "Fortune 500",
     stars: 5,
   },
   {
     quote:
-      "Gracias a su coaching, finalmente me atreví a elegirme a mí misma. Cambiaste mi vida.",
-    name: "Cliente Transformada",
-    company: "Nueva York",
+      "Thanks to her coaching, I finally dared to choose myself. You changed my life.",
+    name: "Transformed Client",
+    company: "New York",
     stars: 5,
   },
   {
     quote:
-      "Una psicóloga con alma de viajera y corazón de mentora. Absolutamente excepcional.",
-    name: "Organizadora de Evento",
+      "A psychologist with a traveler's soul and a mentor's heart. Absolutely exceptional.",
+    name: "Event Organizer",
     company: "Miami",
     stars: 5,
   },
 ];
 
 const pressLogos = [
-  "Mentoreada por Spencer Hoffmann",
-  "Récord Guinness",
-  "Conferencista Internacional",
-  "Psicóloga Certificada",
-  "50+ Países",
+  "Mentored by Spencer Hoffmann",
+  "Guinness World Record",
+  "International Speaker",
+  "Certified Psychologist",
+  "50+ Countries",
 ];
 
 const faqSchema = {
@@ -74,38 +91,68 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "¿Qué servicios ofrece Heiddy Awais?",
+      name: "What services does Heiddy Awais offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Heiddy Awais ofrece coaching de crecimiento personal, conferencias y keynotes corporativas, talleres de mentalidad femenina, y sesiones individuales de psicología positiva.",
+        text: "Heiddy Awais offers personal growth coaching, corporate conferences and keynotes, feminine mindset workshops, and individual positive psychology sessions.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cómo puedo contratar a Heiddy Awais para una conferencia?",
+      name: "How can I hire Heiddy Awais for a conference?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Puedes contactar a Heiddy directamente a través del formulario de contacto en heiddyawais.com, por WhatsApp al +15859789655, o por email a heiddya24@gmail.com.",
+        text: "You can contact Heiddy directly through the contact form at heiddyawais.com, via WhatsApp at +15859789655, or by email at heiddya24@gmail.com.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Dónde puedo comprar el libro 'Elegirme sin miedo' de Heiddy Awais?",
+      name: "Where can I buy Heiddy Awais's book 'Elegirme sin miedo'?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El libro 'Elegirme sin miedo' de Heiddy Awais está disponible en Amazon y en las principales librerías digitales.",
+        text: "The book 'Elegirme sin miedo' by Heiddy Awais is available on Amazon and major digital bookstores.",
       },
     },
   ],
 };
 
-export default function HomePage() {
+export default function EnglishHomePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
+      {/* Language switcher note */}
+      <div
+        style={{
+          position: "fixed",
+          top: "80px",
+          right: "16px",
+          zIndex: 100,
+          background: "var(--white)",
+          border: "1px solid var(--border)",
+          borderRadius: "8px",
+          padding: "8px 14px",
+          fontFamily: "'Inter', sans-serif",
+          fontSize: "0.8125rem",
+          color: "var(--gray)",
+          boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+          display: "flex",
+          gap: "10px",
+          alignItems: "center",
+        }}
+      >
+        <Link
+          href="/"
+          style={{ color: "var(--gray)", textDecoration: "none" }}
+        >
+          ES
+        </Link>
+        <span style={{ color: "var(--border)" }}>|</span>
+        <span style={{ color: "var(--rose-gold)", fontWeight: 600 }}>EN</span>
+      </div>
 
       {/* HERO */}
       <section
@@ -175,7 +222,7 @@ export default function HomePage() {
                   letterSpacing: "0.05em",
                 }}
               >
-                Psicóloga · Coach · Conferencista
+                Psychologist · Coach · Speaker
               </span>
             </div>
 
@@ -189,11 +236,11 @@ export default function HomePage() {
                 marginBottom: "24px",
               }}
             >
-              Elegirte{" "}
+              Choosing yourself{" "}
               <span style={{ color: "var(--rose-gold)", fontStyle: "italic" }}>
-                sin miedo
+                without fear
               </span>{" "}
-              es el primer paso.
+              is the first step.
             </h1>
 
             <p
@@ -206,9 +253,9 @@ export default function HomePage() {
                 maxWidth: "520px",
               }}
             >
-              Soy <strong style={{ color: "var(--dark)" }}>Heiddy Awais</strong>, psicóloga y coach de
-              crecimiento personal. He recorrido más de 50 países, participé en un Récord Guinness, y
-              mi misión es ayudarte a transformar tu vida desde adentro.
+              I am <strong style={{ color: "var(--dark)" }}>Heiddy Awais</strong>, psychologist and
+              personal growth coach. I have traveled to over 50 countries, participated in a Guinness
+              World Record, and my mission is to help you transform your life from within.
             </p>
 
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
@@ -228,7 +275,7 @@ export default function HomePage() {
                   textDecoration: "none",
                 }}
               >
-                Trabaja conmigo <ArrowRight size={18} />
+                Work with me <ArrowRight size={18} />
               </Link>
               <Link
                 href="/libros"
@@ -247,7 +294,7 @@ export default function HomePage() {
                   textDecoration: "none",
                 }}
               >
-                Mi libro
+                My book
               </Link>
             </div>
           </div>
@@ -276,7 +323,7 @@ export default function HomePage() {
                     opacity: 0.7,
                   }}
                 >
-                  Añade tu foto aquí
+                  Add your photo here
                 </div>
                 <div
                   style={{
@@ -321,7 +368,7 @@ export default function HomePage() {
                   marginTop: "2px",
                 }}
               >
-                Países recorridos
+                Countries visited
               </div>
             </div>
 
@@ -344,7 +391,7 @@ export default function HomePage() {
                   color: "var(--white)",
                 }}
               >
-                Récord
+                Record
               </div>
               <div
                 style={{
@@ -443,7 +490,7 @@ export default function HomePage() {
                   lineHeight: 1.6,
                 }}
               >
-                "La vida más extraordinaria comienza cuando decides elegirte sin miedo."
+                &ldquo;The most extraordinary life begins when you decide to choose yourself without fear.&rdquo;
               </div>
               <div
                 style={{
@@ -471,7 +518,7 @@ export default function HomePage() {
                 marginBottom: "16px",
               }}
             >
-              Sobre mí
+              About me
             </div>
             <h2
               style={{
@@ -483,9 +530,9 @@ export default function HomePage() {
                 lineHeight: 1.2,
               }}
             >
-              Psicóloga con alma de{" "}
+              Psychologist with a{" "}
               <span style={{ color: "var(--rose-gold)", fontStyle: "italic" }}>
-                viajera
+                traveler&apos;s soul
               </span>
             </h2>
             <p
@@ -497,9 +544,9 @@ export default function HomePage() {
                 marginBottom: "20px",
               }}
             >
-              Soy Heiddy Awais, psicóloga, coach de crecimiento personal y conferencista internacional.
-              Mi pasión por entender la mente humana me llevó a recorrer más de 50 países, aprendiendo
-              de culturas, personas y experiencias que hoy comparto con mis clientes y audiencias.
+              I am Heiddy Awais, psychologist, personal growth coach, and international speaker.
+              My passion for understanding the human mind led me to visit over 50 countries, learning
+              from cultures, people, and experiences that I now share with my clients and audiences.
             </p>
             <p
               style={{
@@ -510,9 +557,9 @@ export default function HomePage() {
                 marginBottom: "32px",
               }}
             >
-              Mentoreada por Spencer Hoffmann, participante de un Récord Guinness, y autora de{" "}
-              <em style={{ color: "var(--rose-gold-dark)" }}>Elegirme sin miedo</em> — mi invitación
-              a que te atrevas a ser tú misma, completamente y sin disculpas.
+              Mentored by Spencer Hoffmann, Guinness World Record participant, and author of{" "}
+              <em style={{ color: "var(--rose-gold-dark)" }}>Elegirme sin miedo</em> — my invitation
+              for you to dare to be yourself, fully and unapologetically.
             </p>
             <Link
               href="/sobre-mi"
@@ -529,7 +576,7 @@ export default function HomePage() {
                 paddingBottom: "2px",
               }}
             >
-              Conoce mi historia <ArrowRight size={16} />
+              Discover my story <ArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -550,7 +597,7 @@ export default function HomePage() {
                 marginBottom: "16px",
               }}
             >
-              Mi filosofía
+              My philosophy
             </div>
             <h2
               style={{
@@ -560,9 +607,9 @@ export default function HomePage() {
                 color: "var(--dark)",
               }}
             >
-              Tres pilares que{" "}
+              Three pillars that{" "}
               <span style={{ color: "var(--rose-gold)", fontStyle: "italic" }}>
-                transforman vidas
+                transform lives
               </span>
             </h2>
           </div>
@@ -698,7 +745,7 @@ export default function HomePage() {
                 marginBottom: "16px",
               }}
             >
-              Mi libro
+              My book
             </div>
             <h2
               style={{
@@ -722,8 +769,8 @@ export default function HomePage() {
                 marginBottom: "16px",
               }}
             >
-              Una invitación poderosa a reconectarte con quien verdaderamente eres, a soltarte de lo
-              que no te sirve, y a atreverte a elegirte — sin culpa, sin excusas, sin miedo.
+              A powerful invitation to reconnect with who you truly are, release what no longer serves you,
+              and dare to choose yourself — without guilt, without excuses, without fear.
             </p>
             <p
               style={{
@@ -734,8 +781,8 @@ export default function HomePage() {
                 marginBottom: "40px",
               }}
             >
-              Con herramientas de psicología positiva, experiencias de viaje y reflexiones profundas,
-              este libro es el acompañante que necesitabas para comenzar a vivir en tus propios términos.
+              With tools from positive psychology, travel experiences, and deep reflections,
+              this book is the companion you needed to begin living on your own terms.
             </p>
             <Link
               href="/libros/elegirme-sin-miedo"
@@ -753,7 +800,7 @@ export default function HomePage() {
                 textDecoration: "none",
               }}
             >
-              Conocer el libro <ArrowRight size={18} />
+              Discover the book <ArrowRight size={18} />
             </Link>
           </div>
         </div>
@@ -774,7 +821,7 @@ export default function HomePage() {
                 marginBottom: "16px",
               }}
             >
-              Testimonios
+              Testimonials
             </div>
             <h2
               style={{
@@ -784,10 +831,11 @@ export default function HomePage() {
                 color: "var(--dark)",
               }}
             >
-              Lo que dicen quienes{" "}
+              What those who{" "}
               <span style={{ color: "var(--rose-gold)", fontStyle: "italic" }}>
-                me conocen
-              </span>
+                know me
+              </span>{" "}
+              say
             </h2>
           </div>
 
@@ -875,7 +923,7 @@ export default function HomePage() {
               marginBottom: "32px",
             }}
           >
-            Reconocida por
+            Recognized for
           </div>
           <div
             style={{
@@ -925,9 +973,9 @@ export default function HomePage() {
               lineHeight: 1.2,
             }}
           >
-            ¿Lista para{" "}
+            Ready to{" "}
             <span style={{ color: "var(--rose-gold)", fontStyle: "italic" }}>
-              transformar tu vida
+              transform your life
             </span>
             ?
           </h2>
@@ -940,8 +988,8 @@ export default function HomePage() {
               marginBottom: "40px",
             }}
           >
-            Conferencias corporativas, coaching individual, o simplemente una conversación.
-            Estoy aquí para acompañarte.
+            Corporate conferences, individual coaching, or simply a conversation.
+            I am here to accompany you.
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link
@@ -960,7 +1008,7 @@ export default function HomePage() {
                 textDecoration: "none",
               }}
             >
-              Contáctame <ArrowRight size={18} />
+              Contact me <ArrowRight size={18} />
             </Link>
             <a
               href="https://wa.me/15859789655"
