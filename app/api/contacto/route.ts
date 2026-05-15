@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface ContactoPayload {
   nombre: string;
@@ -19,7 +22,6 @@ export async function POST(request: NextRequest) {
 
     const { nombre, email, tipoConsulta, mensaje } = body;
 
-    // Basic validation
     if (!nombre || nombre.trim().length < 2) {
       return NextResponse.json(
         { message: "Por favor ingresa tu nombre completo." },
@@ -48,31 +50,60 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Here you would integrate with your email service provider (e.g., Resend, SendGrid, Nodemailer).
-    // For now, we log the submission and return success.
-    // Example integration point:
-    //
-    // await sendEmail({
-    //   from: "noreply@heiddyawais.com",
-    //   to: "heiddya24@gmail.com",
-    //   subject: `Nuevo mensaje de contacto: ${tipoConsulta}`,
-    //   html: `<p><strong>Nombre:</strong> ${nombre}</p>
-    //          <p><strong>Email:</strong> ${email}</p>
-    //          <p><strong>WhatsApp:</strong> ${body.whatsapp || "No proporcionado"}</p>
-    //          <p><strong>Empresa:</strong> ${body.empresa || "No proporcionada"}</p>
-    //          <p><strong>Tipo:</strong> ${tipoConsulta}</p>
-    //          <p><strong>Mensaje:</strong><br>${mensaje}</p>`,
-    // });
-
-    console.log("Contacto form submission:", {
-      nombre,
-      email,
-      whatsapp: body.whatsapp,
-      empresa: body.empresa,
-      tipoConsulta,
-      mensajeLength: mensaje.length,
-      timestamp: new Date().toISOString(),
+    const { error } = await resend.emails.send({
+      from: "Formulario de Contacto <hola@heiddyawais.com>",
+      to: ["heiddy@heiddyawais.com"],
+      replyTo: email,
+      subject: `Nuevo mensaje: ${tipoConsulta} — ${nombre}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #333; border-bottom: 2px solid #f0a500; padding-bottom: 10px;">
+            Nuevo mensaje de contacto
+          </h2>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555; width: 140px;">Nombre:</td>
+              <td style="padding: 8px 0; color: #333;">${nombre}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555;">Email:</td>
+              <td style="padding: 8px 0; color: #333;">${email}</td>
+            </tr>
+            ${body.whatsapp ? `
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555;">WhatsApp:</td>
+              <td style="padding: 8px 0; color: #333;">${body.whatsapp}</td>
+            </tr>` : ""}
+            ${body.empresa ? `
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555;">Empresa:</td>
+              <td style="padding: 8px 0; color: #333;">${body.empresa}</td>
+            </tr>` : ""}
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555;">Tipo de consulta:</td>
+              <td style="padding: 8px 0; color: #333;">${tipoConsulta}</td>
+            </tr>
+          </table>
+          <div style="margin-top: 20px;">
+            <p style="font-weight: bold; color: #555; margin-bottom: 8px;">Mensaje:</p>
+            <div style="background: #f9f9f9; padding: 16px; border-radius: 6px; color: #333; line-height: 1.6;">
+              ${mensaje.replace(/\n/g, "<br>")}
+            </div>
+          </div>
+          <p style="margin-top: 24px; font-size: 12px; color: #999;">
+            Enviado desde heiddyawais.com — Puedes responder directamente a este email.
+          </p>
+        </div>
+      `,
     });
+
+    if (error) {
+      console.error("Resend error:", error);
+      return NextResponse.json(
+        { message: "Error al enviar el mensaje. Por favor intenta de nuevo." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { message: "Mensaje recibido correctamente. Te responderemos pronto." },
