@@ -92,9 +92,9 @@ const chapters = [
   },
   {
     number: "06",
-    title: "El Récord y la mentalidad de excelencia",
+    title: "Dentro del Récord Guinness World Records",
     description:
-      "Lecciones del Récord Guinness aplicadas a tu vida diaria: límites, equipo y reinvención.",
+      "Lo que significa ser seleccionada entre 333 personas para un evento histórico: lecciones de límites, colectividad y reinvención aplicadas a tu vida.",
   },
   {
     number: "07",

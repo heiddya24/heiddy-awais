@@ -76,9 +76,9 @@ const timeline = [
   },
   {
     year: "Récord",
-    title: "Récord Guinness",
+    title: "Récord Guinness World Records",
     description:
-      "Participé en la obtención de un Récord Guinness, una experiencia que me demostró el poder ilimitado del trabajo en equipo y la mentalidad de excelencia.",
+      "Fui seleccionada como una de las 333 personas entrevistadas en un evento histórico que rompió el Récord Guinness World Records. Una experiencia que me demostró el poder ilimitado del trabajo colectivo, la resistencia humana y la mentalidad de excelencia.",
   },
   {
     year: "50+ Países",
@@ -221,8 +221,9 @@ export default function SobreMiPage() {
               }}
             >
               Nacida con una curiosidad insaciable y una profunda pasión por el ser humano, he
-              recorrido más de 50 países, obtenido un Récord Guinness, sido mentoreada por Spencer
-              Hoffmann y publicado el libro <em style={{ color: "var(--rose-gold-dark)" }}>Elegirme sin miedo</em>.
+              recorrido más de 50 países, sido seleccionada para formar parte de un evento del
+              Récord Guinness World Records, sido mentoreada por Spencer Hoffmann y publicado el
+              libro <em style={{ color: "var(--rose-gold-dark)" }}>Elegirme sin miedo</em>.
             </p>
             <Link
               href="/contacto"
@@ -328,8 +329,8 @@ export default function SobreMiPage() {
               experiencias son la columna vertebral de todo lo que enseño.
             </p>
             <p>
-              Participar en un Récord Guinness fue una de las experiencias más transformadoras de mi vida.
-              Me demostró, de manera visceral, que los límites que creemos que tenemos casi nunca son
+              Ser seleccionada como parte del Récord Guinness World Records fue una de las experiencias más transformadoras de mi vida.
+              Estar dentro de ese evento histórico me demostró, de manera visceral, que los límites que creemos tener casi nunca son
               reales — son construcciones del miedo que podemos aprender a disolver.
             </p>
             <p>

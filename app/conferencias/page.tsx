@@ -40,7 +40,7 @@ const faqSchema = {
       name: "¿Cuáles son los temas principales de las conferencias de Heiddy Awais?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los temas principales incluyen: Mentalidad Femenina, Crecimiento Personal sin Miedo, Liderazgo Femenino, El Récord Guinness como metáfora de vida, y Lecciones de 50+ países.",
+        text: "Los temas principales incluyen: Mentalidad Femenina, Crecimiento Personal sin Miedo, Liderazgo Femenino, Lecciones desde adentro del Récord Guinness World Records, y Sabiduría de 50+ países.",
       },
     },
     {
@@ -92,10 +92,10 @@ const topics = [
   },
   {
     icon: Award,
-    title: "El Récord Guinness",
+    title: "Dentro del Récord Guinness World Records",
     subtitle: "La mentalidad de los límites imposibles",
     description:
-      "Una historia extraordinaria de superación, trabajo en equipo y mentalidad de excelencia. Heiddy comparte las lecciones que aprendió al participar en la obtención de un Récord Guinness y cómo aplicarlas a tu vida personal y profesional.",
+      "Heiddy fue seleccionada entre 333 personas para ser entrevistada en un evento histórico que rompió el Récord Guinness World Records. En esta keynote comparte las lecciones de mentalidad, resistencia y trabajo colectivo que vivió desde adentro — y cómo aplicarlas a tu vida y tu equipo.",
     duration: "45-60 min",
     audience: "Corporativo, Eventos de motivación",
   },
