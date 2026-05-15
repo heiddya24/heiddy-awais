@@ -396,28 +396,11 @@ export default function SobreMiPage() {
             background: "rgba(196,149,106,0.12)",
           }}
         >
-          <div style={{ textAlign: "center" }}>
-            <div
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: "1rem",
-                color: "var(--rose-gold-dark)",
-                opacity: 0.8,
-              }}
-            >
-              Foto en conferencia / viaje
-            </div>
-            <div
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontSize: "0.75rem",
-                color: "var(--gray)",
-                marginTop: "8px",
-              }}
-            >
-              /public/images/heiddy-conferencia.jpg — reemplazar con imagen real
-            </div>
-          </div>
+          <img
+            src="/images/heiddy-guinness.jpg"
+            alt="Heiddy Awais en la gala del Récord Guinness"
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          />
         </div>
         <div
           style={{
