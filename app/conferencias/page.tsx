@@ -348,6 +348,37 @@ export default function ConferenciasPage() {
         </div>
       </section>
 
+      {/* GUINNESS PHOTO BANNER */}
+      <section style={{ position: "relative", maxHeight: "480px", overflow: "hidden" }}>
+        <img
+          src="/images/heiddy-guinness.jpg"
+          alt="Heiddy Awais en la gala oficial del Récord Guinness World Records"
+          style={{ width: "100%", objectFit: "cover", objectPosition: "center 20%", display: "block", maxHeight: "480px" }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            background: "linear-gradient(to top, rgba(26,26,26,0.85) 0%, transparent 100%)",
+            padding: "40px 48px 32px",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "1.125rem",
+              fontStyle: "italic",
+              color: "var(--white)",
+              opacity: 0.95,
+            }}
+          >
+            Participante oficial del Récord Guinness World Records
+          </span>
+        </div>
+      </section>
+
       {/* STATS BAR */}
       <section
         style={{
