@@ -257,38 +257,18 @@ export default function HomePage() {
             <div
               style={{
                 width: "380px",
-                height: "480px",
                 borderRadius: "50% 50% 50% 50% / 40% 40% 60% 60%",
-                background: "linear-gradient(145deg, var(--rose-gold-light), var(--rose-gold-pale))",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 border: "3px solid rgba(196,149,106,0.2)",
+                overflow: "hidden",
                 maxWidth: "100%",
+                boxShadow: "0 24px 64px rgba(196,149,106,0.2)",
               }}
             >
-              <div style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: "1rem",
-                    color: "var(--rose-gold-dark)",
-                    opacity: 0.7,
-                  }}
-                >
-                  Añade tu foto aquí
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: "0.75rem",
-                    color: "var(--gray)",
-                    marginTop: "8px",
-                  }}
-                >
-                  /public/images/heiddy-hero.jpg
-                </div>
-              </div>
+              <img
+                src="/images/heiddy-amigable.jpg"
+                alt="Heiddy Awais — Coach de Crecimiento Personal"
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+              />
             </div>
 
             <div

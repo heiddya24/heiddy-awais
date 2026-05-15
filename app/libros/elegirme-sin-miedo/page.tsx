@@ -637,36 +637,17 @@ export default function ElegirseSinMiedoPage() {
               width: "160px",
               height: "160px",
               borderRadius: "50%",
-              background: "linear-gradient(145deg, var(--rose-gold-light), var(--rose-gold))",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              overflow: "hidden",
               flexShrink: 0,
               border: "4px solid var(--white)",
               boxShadow: "0 8px 32px rgba(196,149,106,0.3)",
             }}
           >
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "0.75rem",
-                  color: "var(--white)",
-                  opacity: 0.9,
-                }}
-              >
-                Foto
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "0.625rem",
-                  color: "rgba(255,255,255,0.7)",
-                }}
-              >
-                heiddy-author.jpg
-              </div>
-            </div>
+            <img
+              src="/images/heiddy-profesional.jpg"
+              alt="Heiddy Awais"
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
+            />
           </div>
           <div>
             <div
