@@ -244,45 +244,23 @@ export default function SobreMiPage() {
             </Link>
           </div>
 
-          {/* Photo placeholder */}
+          {/* Photo */}
           <div style={{ display: "flex", justifyContent: "center" }}>
             <div
               style={{
                 width: "420px",
-                height: "520px",
                 maxWidth: "100%",
                 borderRadius: "50% 50% 50% 50% / 40% 40% 60% 60%",
-                background: "linear-gradient(145deg, var(--rose-gold-light), var(--rose-gold-pale))",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 border: "3px solid rgba(196,149,106,0.2)",
-                flexDirection: "column",
-                gap: "12px",
+                overflow: "hidden",
+                boxShadow: "0 24px 64px rgba(196,149,106,0.2)",
               }}
             >
-              <div
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "1rem",
-                  color: "var(--rose-gold-dark)",
-                  opacity: 0.7,
-                  textAlign: "center",
-                  padding: "0 32px",
-                }}
-              >
-                Foto profesional de Heiddy
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "0.75rem",
-                  color: "var(--gray)",
-                  textAlign: "center",
-                }}
-              >
-                Reemplazar con: /public/images/heiddy-sobre-mi.jpg
-              </div>
+              <img
+                src="/images/heiddy-profesional.jpg"
+                alt="Heiddy Awais — Psicóloga y Coach de Crecimiento Personal"
+                style={{ width: "100%", display: "block", objectFit: "cover" }}
+              />
             </div>
           </div>
         </div>
