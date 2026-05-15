@@ -185,88 +185,16 @@ export default function LibrosPage() {
                 justifyContent: "center",
               }}
             >
-              <div
+              <img
+                src="/images/elegirme-sin-miedo-cover.jpg"
+                alt="Portada del libro Elegirme sin miedo de Heiddy Awais"
                 style={{
                   width: "220px",
-                  height: "310px",
-                  background: "linear-gradient(145deg, var(--rose-gold) 0%, var(--rose-gold-dark) 100%)",
                   borderRadius: "8px",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: "28px 20px",
                   boxShadow: "16px 16px 48px rgba(0,0,0,0.5)",
-                  position: "relative",
+                  display: "block",
                 }}
-              >
-                {/* Spine decoration */}
-                <div
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    top: 0,
-                    bottom: 0,
-                    width: "8px",
-                    background: "rgba(0,0,0,0.2)",
-                    borderRadius: "8px 0 0 8px",
-                  }}
-                />
-                {/* Top ornament */}
-                <div
-                  style={{
-                    width: "32px",
-                    height: "1px",
-                    background: "rgba(255,255,255,0.4)",
-                    marginBottom: "20px",
-                  }}
-                />
-                <div
-                  style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontSize: "1.5rem",
-                    fontStyle: "italic",
-                    fontWeight: 600,
-                    color: "var(--white)",
-                    lineHeight: 1.3,
-                    textAlign: "center",
-                    marginBottom: "20px",
-                  }}
-                >
-                  Elegirme sin miedo
-                </div>
-                <div
-                  style={{
-                    width: "32px",
-                    height: "1px",
-                    background: "rgba(255,255,255,0.4)",
-                    marginBottom: "20px",
-                  }}
-                />
-                <div
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontSize: "0.75rem",
-                    color: "rgba(255,255,255,0.8)",
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    textAlign: "center",
-                  }}
-                >
-                  Heiddy Awais
-                </div>
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "12px",
-                    right: "12px",
-                    width: "20px",
-                    height: "20px",
-                    borderRadius: "50%",
-                    background: "rgba(255,255,255,0.15)",
-                  }}
-                />
-              </div>
+              />
             </div>
 
             {/* Book Info */}
@@ -388,7 +316,7 @@ export default function LibrosPage() {
                   Ver detalles <ArrowRight size={18} />
                 </Link>
                 <a
-                  href="https://www.amazon.com/s?k=elegirme+sin+miedo+heiddy+awais"
+                  href="https://a.co/d/08wC0hc7"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{

@@ -39,8 +39,7 @@ const bookSchema = {
     "@type": "ReadAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate:
-        "https://www.amazon.com/s?k=elegirme+sin+miedo+heiddy+awais",
+      urlTemplate: "https://a.co/d/08wC0hc7",
     },
   },
 };
@@ -224,93 +223,19 @@ export default function ElegirseSinMiedoPage() {
           }}
           className="ha-book-hero"
         >
-          {/* Book Cover Design */}
+          {/* Book Cover */}
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <div
+            <img
+              src="/images/elegirme-sin-miedo-cover.jpg"
+              alt="Portada del libro Elegirme sin miedo de Heiddy Awais"
               style={{
                 width: "260px",
-                height: "370px",
-                background: "linear-gradient(145deg, var(--rose-gold) 0%, var(--rose-gold-dark) 100%)",
                 borderRadius: "10px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "36px 24px",
                 boxShadow: "24px 24px 64px rgba(0,0,0,0.6), -4px -4px 24px rgba(196,149,106,0.2)",
-                position: "relative",
                 flexShrink: 0,
+                display: "block",
               }}
-            >
-              <div
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  bottom: 0,
-                  width: "10px",
-                  background: "rgba(0,0,0,0.25)",
-                  borderRadius: "10px 0 0 10px",
-                }}
-              />
-              <div
-                style={{
-                  position: "absolute",
-                  top: "20px",
-                  left: "20px",
-                  right: "20px",
-                  bottom: "20px",
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  borderRadius: "4px",
-                  pointerEvents: "none",
-                }}
-              />
-              <div
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "0.625rem",
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.7)",
-                  marginBottom: "24px",
-                }}
-              >
-                Heiddy Awais
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontSize: "1.75rem",
-                  fontStyle: "italic",
-                  fontWeight: 700,
-                  color: "var(--white)",
-                  lineHeight: 1.25,
-                  textAlign: "center",
-                  marginBottom: "24px",
-                }}
-              >
-                Elegirme sin miedo
-              </div>
-              <div
-                style={{
-                  width: "40px",
-                  height: "1px",
-                  background: "rgba(255,255,255,0.5)",
-                  marginBottom: "24px",
-                }}
-              />
-              <div
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: "0.75rem",
-                  color: "rgba(255,255,255,0.6)",
-                  textAlign: "center",
-                  lineHeight: 1.5,
-                }}
-              >
-                Psicología · Amor propio · Transformación
-              </div>
-            </div>
+            />
           </div>
 
           {/* Info */}
@@ -397,7 +322,7 @@ export default function ElegirseSinMiedoPage() {
 
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <a
-                href="https://www.amazon.com/s?k=elegirme+sin+miedo+heiddy+awais"
+                href="https://a.co/d/08wC0hc7"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -838,7 +763,7 @@ export default function ElegirseSinMiedoPage() {
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
             <a
-              href="https://www.amazon.com/s?k=elegirme+sin+miedo+heiddy+awais"
+              href="https://a.co/d/08wC0hc7"
               target="_blank"
               rel="noopener noreferrer"
               style={{
