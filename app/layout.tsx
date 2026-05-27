@@ -59,6 +59,9 @@ export const metadata: Metadata = {
       "en-US": `${SITE_URL}/en`,
     },
   },
+  verification: {
+    google: "vef3QG-muc2port-O13l9PeLoGZw-0s-O3HUFvT9SZs",
+  },
 };
 
 const personSchema = {
